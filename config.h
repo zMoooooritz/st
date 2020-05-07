@@ -83,7 +83,7 @@ char *termname = "st";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;           //< alpha value used when the window is focused.
+float alpha = 0.9;           //< alpha value used when the window is focused.
 float alphaUnfocussed = 0.6; //< alpha value used when the focus is lost
 
 /* Terminal colors (16 first used in escape sequence) */
@@ -92,8 +92,8 @@ static const char *colorname[] = {
   /* 8 normal colors */
   [0] = "#000000", /* black   */
   [1] = "#ff5555", /* red     */
-  [2] = "#50fa7b", /* green   */
-  [3] = "#f1fa8c", /* yellow  */
+  [2] = "#7bff7b", /* green   */
+  [3] = "#b58900", /* yellow  */
   [4] = "#268bd2", /* blue    */
   [5] = "#ff79c6", /* magenta */
   [6] = "#8be9fd", /* cyan    */
@@ -101,12 +101,12 @@ static const char *colorname[] = {
 
   /* 8 bright colors */
   [8]  = "#44475a", /* black   */
-  [9]  = "#ff5555", /* red     */
-  [10] = "#50fa7b", /* green   */
+  [9]  = "#ff9585", /* red     */
+  [10] = "#80ff9b", /* green   */
   [11] = "#f1fa8c", /* yellow  */
-  [12] = "#bd93f9", /* blue    */
-  [13] = "#ff79c6", /* magenta */
-  [14] = "#8be9fd", /* cyan    */
+  [12] = "#7da3f9", /* blue    */
+  [13] = "#ff99e6", /* magenta */
+  [14] = "#9bf9fd", /* cyan    */
   [15] = "#ffffff", /* white   */
 
   /* special colors */
@@ -199,8 +199,8 @@ static uint forcemousemod = ShiftMask;
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ ShiftMask,            Button4, kscrollup,      {.i = 1} },
-	{ ShiftMask,            Button5, kscrolldown,    {.i = 1} },
+	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 5} },
+	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = 5} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
